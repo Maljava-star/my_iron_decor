@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #e5f0f5f4; /* світло-сірий фон */
+  color: #323030; /* чорний текст */
+}
+
+h1, h2 {
+  color: #180144; /* темносиній */
+  margin-bottom: 10px;
+}
+
+.subcategory-menu {
+  margin-bottom: 20px;
+}
+
+.subcategory-menu a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #255397; /* темносиній */
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.subcategory-menu a:hover {
+  background-color: #5f6c80;
+  color: #fff; /* білий текст при ховері */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background: #dee3eb;
+  height: 100%;
+  border-radius: 8px;
+  min-height: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.slider img.slide {
+  display: none;
+  width: 100%;
+  height: 370px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider img.active {
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.slider .prev {
+  left: 5px;
+}
+
+.slider .next {
+  right: 5px;
+}
+.product-card h3 {
+  min-height: 48px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  color: #003e4d; /* темносиній */
+}
+
+.product-card img {
+  width: 100%;
+  height: 370px; 
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.product-card p {
+  min-height: 60px;     
+  overflow: hidden;
+}
+.price {
+  color: #495713; /* темносиній */
+  font-weight: bold;
+  margin-top: auto;
+  font-size: 1.1em;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
